@@ -24,8 +24,23 @@ white = su.generate_white_noise(duration, fs)
 pink = su.generate_pink_noise(duration, fs)
 tone = su.generate_sine(440, duration, fs)
 
+'''
 su.save_audio("../outputs/test_white.wav", white, fs)
 su.save_audio("../outputs/test_pink.wav", pink, fs)
 su.save_audio("../outputs/test_sine.wav", tone, fs)
 
 print("Saved test noise signals in outputs/.")
+'''
+
+from src.simulation import room_sim as rs
+
+irs = rs.simulate_room_paths(fs)
+print(f"Primary IR length: {len(irs['primary'])}")
+print(f"Secondary IR length: {len(irs['secondary'])}")
+
+# Optional: save them for inspection
+import soundfile as sf
+sf.write("../outputs/rir_primary.wav", irs["primary"], fs)
+sf.write("../outputs/rir_secondary.wav", irs["secondary"], fs)
+
+print("Saved room impulse responses to outputs/.")
