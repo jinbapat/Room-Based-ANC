@@ -81,12 +81,5 @@ This repository includes a `LICENSE` file at the project root. Check it for lice
 
 Project owner: `jinbapat` (see repository on GitHub). For questions or suggestions, open an issue on the repo.
 
----
 
-If you'd like, I can also:
 
-- Add a `CONTRIBUTING.md` with a development checklist
-- Create a small example Jupyter notebook that runs through a minimal simulation and plots results
-- Add unit tests for `signal_utils.py`
-
-Tell me which of those you'd like next.
